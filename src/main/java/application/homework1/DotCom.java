@@ -1,7 +1,7 @@
 package homework1;
 
 public class DotCom {
-    public int[] locations = new int[7];
+    private int[] locations = new int[7];
     private int startNum = 0;
     int locationCells;
     int numOfHits = 0;
