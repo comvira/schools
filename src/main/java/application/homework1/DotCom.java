@@ -26,8 +26,8 @@ public class DotCom {
         locationCells = Iocs;
     }
 
-    public void checkYourself(int stringGuess) {
-        int guess = stringGuess;
+    public void checkYourself(int ingGuess) {
+        int guess = ingGuess;
         String result = "Мимо";
         for (int cell : locations) {
             if (guess == cell) {
