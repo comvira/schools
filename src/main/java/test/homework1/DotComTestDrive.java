@@ -8,15 +8,17 @@ public class DotComTestDrive {
         DotCom dot = new DotCom();
         Scanner sc = new Scanner(System.in);
         int num = 0;
+        int col = 0;
 
         dot.mRandom();
         String arr = Arrays.toString(dot.locations);
         System.out.println(arr);
 
-        while (true){
-            if(sc.hasNextInt()) {
+        while (true) {
+            if (sc.hasNextInt()) {
                 num = sc.nextInt();
-                dot.setLocationCells(num);
+                col++;
+                dot.setLocationCells(col);
                 dot.checkYourself(num);
             } else {
                 break;

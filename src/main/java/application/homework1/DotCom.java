@@ -22,9 +22,10 @@ public class DotCom {
     }
 
     public void setLocationCells(int Iocs) {
+
         locationCells = Iocs;
     }
-    
+
     public void checkYourself(int stringGuess) {
         int guess = stringGuess;
         String result = "Мимо";
@@ -32,16 +33,15 @@ public class DotCom {
             if (guess == cell) {
                 result = "Попал";
                 numOfHits++;
-                break;
-            } else if (numOfHits < 3) {
-                System.out.println(result);
+                if (numOfHits == 3) {
+                    result = "Потопил";
+                    System.out.println(result);
+                    System.out.println("кол попыток - " + locationCells);
+                    System.exit(0);
+                }
                 break;
             }
-            if (numOfHits == 3) {
-                result = "Потопил";
-                break;
-            }
-            System.out.println(result);
         }
+        System.out.println(result);
     }
 }
