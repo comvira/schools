@@ -1,6 +1,5 @@
 package homework1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class DotComTestDrive {
@@ -11,8 +10,6 @@ public class DotComTestDrive {
         int col = 0;
 
         dot.mRandom();
-        //String arr = Arrays.toString(dot.locations);
-        //System.out.println(arr);
 
         while (true) {
             if (sc.hasNextInt()) {
