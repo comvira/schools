@@ -11,8 +11,8 @@ public class DotComTestDrive {
         int col = 0;
 
         dot.mRandom();
-        String arr = Arrays.toString(dot.locations);
-        System.out.println(arr);
+        //String arr = Arrays.toString(dot.locations);
+        //System.out.println(arr);
 
         while (true) {
             if (sc.hasNextInt()) {
