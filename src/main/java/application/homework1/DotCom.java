@@ -36,7 +36,7 @@ public class DotCom {
                 if (numOfHits == 3) {
                     result = "Потопил";
                     System.out.println(result);
-                    System.out.println("кол попыток - " + locationCells);
+                    System.out.println("количество попыток - " + locationCells);
                     System.exit(0);
                 }
                 break;
