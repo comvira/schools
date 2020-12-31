@@ -1,47 +1,35 @@
 package homework1;
 
+import java.util.ArrayList;
+
 public class DotCom {
-    private int[] locations = new int[7];
-    private int startNum = 0;
-    int locationCells;
-    int numOfHits = 0;
+ /*   private ArrayList<String> locationCells;
+    private String name;
 
-    public void mRandom() {
-        this.startNum = (int) (Math.random() * 6);
-        if (startNum == 6 || startNum == 5 || startNum == 4) {
-            locations[6] = 7;
-            locations[5] = 6;
-            locations[4] = 5;
-        } else {
-            locations[startNum] = startNum + 1;
-            startNum++;
-            locations[startNum] = startNum + 1;
-            startNum++;
-            locations[startNum] = startNum + 1;
-        }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setLocationCells(int Iocs) {
-
-        locationCells = Iocs;
+    public void setLocationCells(int[] loc)
+    {
+        locationCells = loc;
     }
 
-    public void checkYourself(int ingGuess) {
-        int guess = ingGuess;
+    public String checkYourself(String userInput)
+    {
         String result = "Мимо";
-        for (int cell : locations) {
-            if (guess == cell) {
+        int index = locationCells.indexOf(userInput);
+        if (index >= 0) {
+            locationCells.remove(index);
+            if (locationCells.isEmpty()) {
+                result = "Убил " + name;
+                System.out.println(result);
+            }
+            else
+            {
                 result = "Попал";
-                numOfHits++;
-                if (numOfHits == 3) {
-                    result = "Потопил";
-                    System.out.println(result);
-                    System.out.println("количество попыток - " + locationCells);
-                    System.exit(0);
-                }
-                break;
             }
         }
-        System.out.println(result);
-    }
+        return result;
+    }*/
 }
