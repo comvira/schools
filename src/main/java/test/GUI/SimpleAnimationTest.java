@@ -4,8 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SimpleAnimationTest {
-    int x = 70;
-    int y = 70;
+    int x = 10;
+    int y = 10;
 
     public static void main(String[] args) {
         SimpleAnimationTest gui = new SimpleAnimationTest();
@@ -19,17 +19,17 @@ public class SimpleAnimationTest {
         MyDrawPanel drawPanel = new MyDrawPanel();
 
         frame.getContentPane().add(drawPanel);
-        frame.setSize(300, 300);
+        frame.setSize(500, 500);
         frame.setVisible(true);
 
-        for (int i = 0; i < 130; i++) {
+        for (int i = 0; i < 430; i++) {
             x++;
             y++;
 
             drawPanel.repaint();
 
             try {
-                Thread.sleep(50);
+                Thread.sleep(64);
             } catch (Exception ex) {
 
             }
