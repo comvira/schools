@@ -13,6 +13,10 @@ public class TextAreaTest {
     }
 
     public void go() {
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        frame.setSize(606, 600);
+        frame.setVisible(true);
     }
 }
