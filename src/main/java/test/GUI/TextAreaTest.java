@@ -17,9 +17,14 @@ public class TextAreaTest {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
+        JPanel panelNorth = new JPanel();
 
         JButton button = new JButton("Click me");
         button.addActionListener(this::actionPerformed);
+
+        JLabel label = new JLabel("Proba");
+        JCheckBox checkBox = new JCheckBox();
+        JTextField textNorth = new JTextField(20);
 
         text = new JTextArea(10, 20);
         text.setLineWrap(true);
@@ -30,11 +35,20 @@ public class TextAreaTest {
 
         panel.add(scrollPane);
 
+        panelNorth.add(label);
+        panelNorth.add(checkBox);
+        panelNorth.add(textNorth);
+
+        frame.getContentPane().add(BorderLayout.NORTH, panelNorth);
+
+
         frame.getContentPane().add(BorderLayout.CENTER, panel);
         frame.getContentPane().add(BorderLayout.SOUTH, button);
 
         frame.setSize(350, 300);
         frame.setVisible(true);
+
+        textNorth.requestFocus();
     }
 
     public void actionPerformed(ActionEvent ev) {
