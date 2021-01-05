@@ -37,6 +37,7 @@ public class TextAreaTest {
 
         panelNorth.add(label);
         panelNorth.add(checkBox);
+        checkBox.addActionListener(event -> actionCheckNorth(event, checkBox));
         panelNorth.add(textNorth);
 
         frame.getContentPane().add(BorderLayout.NORTH, panelNorth);
@@ -53,5 +54,13 @@ public class TextAreaTest {
 
     public void actionPerformed(ActionEvent ev) {
         text.append("button clicked \n");
+    }
+
+    public void actionCheckNorth(ActionEvent event, JCheckBox checkBox) {
+        if (checkBox.isSelected()) {
+            text.append("CheckNorth true \n");
+        } else {
+            text.append("CheckNorth false \n");
+        }
     }
 }
