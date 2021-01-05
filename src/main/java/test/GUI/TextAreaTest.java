@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 public class TextAreaTest {
     JTextArea text;
+    //JTextField textNorth;
 
     public static void main(String[] args) {
         TextAreaTest gui = new TextAreaTest();
@@ -38,6 +39,7 @@ public class TextAreaTest {
         panelNorth.add(label);
         panelNorth.add(checkBox);
         checkBox.addActionListener(event -> actionCheckNorth(event, checkBox));
+        textNorth.addActionListener(event -> actionTextNorth(event, textNorth));
         panelNorth.add(textNorth);
 
         frame.getContentPane().add(BorderLayout.NORTH, panelNorth);
@@ -54,6 +56,7 @@ public class TextAreaTest {
 
     public void actionPerformed(ActionEvent ev) {
         text.append("button clicked \n");
+        //text.append(textNorth.getText() + " \n");
     }
 
     public void actionCheckNorth(ActionEvent event, JCheckBox checkBox) {
@@ -62,5 +65,11 @@ public class TextAreaTest {
         } else {
             text.append("CheckNorth false \n");
         }
+    }
+
+    public void actionTextNorth(ActionEvent event, JTextField textNorth) {
+        text.append(textNorth.getText() + " \n");
+        textNorth.setText("");
+        textNorth.requestFocus();
     }
 }
